@@ -1,10 +1,19 @@
 body {
   color: #222;
-  font-family: sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
   line-height: 1.5;
-  margin: 1rem;
+  padding: 1rem;
   display: flex;
   justify-content: center;
+  max-width: 70ch;
+  margin: auto;
+}
+
+h1,
+h2 {
+  margin: 0;
 }
 
 .container {
@@ -30,4 +39,40 @@ a {
 .navigation-menu {
   display: flex;
   justify-content: space-between;
+}
+
+.about-header-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.about-image {
+  height: 180px;
+  width: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.social-media {
+  display: flex;
+  gap: 10px;
+}
+
+.about-body {
+  text-align: justify;
+}
+
+.about-title {
+  font-size: 2em;
+}
+
+.about-tagline {
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .about-header-frame {
+      flex-direction: column;
+    }
 }
