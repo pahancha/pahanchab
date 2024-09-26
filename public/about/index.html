@@ -6,7 +6,7 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title> | pahancha</title>
+<title>Hi, I’m Pahan 👋🏼 | pahancha</title>
 
     <link rel="stylesheet" href="/css/main.css">
 
@@ -38,15 +38,64 @@
 
 </header>
       <main>
-  <h1></h1>
-  <h3 id="hi-im-pahan-">Hi, I&rsquo;m Pahan 👋🏼</h3>
+<section class="about-page">
+  <div class="content">
+    
+                         
+
+    <div class="about-header-frame">
+      <div class="header-socials-container">
+        <h1 class="about-title">Hi, I’m Pahan 👋🏼</h1>
+        <h2 class="about-tagline">Software Engineer in Colombo, Sri Lanka</h2>
+        <div class="social-media">
+          <a href="https://github.com/pahancha" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/pahan-chathuranga/" target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/pahan_chathuranga/" target="_blank">Instagram</a>
+        </div>
+      </div>
+
+      <img
+        id="about-image"
+        class="about-image"
+        src="/profile-images/image01.jpg"
+        alt="About Image"
+      />
+    </div>
+
+    <div class="about-body">
+      <!-- raw HTML omitted -->
 <p>I&rsquo;m Pahan, a Software Engineer based in Colombo, Sri Lanka, on an ongoing journey of becomingn a computer scientist and an amateur writer (and hopefully a future novelist!).</p>
 <p>I love creating things and documenting the process. I enjoy photography; sometimes I go out with my camera to capture moments. I&rsquo;m also a stamp collector (yes, really!), pool player, and reader. I love exploring new things and visiting different places. Fun fact: I&rsquo;m a Level 8 Google Local Guide—check out some of my contributions <a href="https://maps.app.goo.gl/CSp48hMUo7LBPyvm7?g_st=ic">here</a>.</p>
 <p>I’m also passionate about teaching and sharing what I know.</p>
 <p>You can find the source code for this web/blog (and ofc other projects) in my <a href="https://github.com/pahancha">GitHub</a>. By the way, this blog is built with Hugo!</p>
 <p>Please note, all views expressed here are my own and do not reflect the opinions of my current or past employers.</p>
 
-  
+    </div>
+
+    
+    <script>
+      const images = [
+        "\/profile-images\/image01.jpg",
+        "\/profile-images\/image05.jpg",
+        "\/profile-images\/image02.jpg",
+        "\/profile-images\/image06.jpg",
+        "\/profile-images\/image03.jpg",
+        "\/profile-images\/image04.jpg",
+      ];
+
+      let currentImageIndex = 0;
+
+      function changeImage() {
+        const imgElement = document.getElementById("about-image");
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        imgElement.src = images[currentImageIndex];
+      }
+
+      
+      setInterval(changeImage, 24000);
+    </script>
+  </div>
+</section>
 </main>
       <footer><p>pahancha 2024. this blog and the theme are opensource! &lt;3 </p>
 </footer>

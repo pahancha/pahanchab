@@ -1,9 +1,15 @@
 ---
 date: 2024-09-16
 draft: false
+layout: "single"
+title: "Hi, I’m Pahan 👋🏼"
+tagline: "Software Engineer in Colombo, Sri Lanka"
+github: "https://github.com/pahancha"
+linkedin: "https://www.linkedin.com/in/pahan-chathuranga/"
+instagram: "https://www.instagram.com/pahan_chathuranga/"
 ---
 
-### Hi, I'm Pahan 👋🏼
+<!-- ### Hi, I'm Pahan 👋🏼 -->
 
 I'm Pahan, a Software Engineer based in Colombo, Sri Lanka, on an ongoing journey of becomingn a computer scientist and an amateur writer (and hopefully a future novelist!).
 
