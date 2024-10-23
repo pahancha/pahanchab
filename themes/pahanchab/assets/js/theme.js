@@ -13,7 +13,7 @@ function toggleTheme() {
 function updateIcon(theme) {
   const lightIcon = document.getElementById("light-icon");
   const darkIcon = document.getElementById("dark-icon");
-  if (theme === "dark") {
+  if (theme === "light") {
     lightIcon.style.display = "none";
     darkIcon.style.display = "inline";
   } else {

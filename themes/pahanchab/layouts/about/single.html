@@ -3,7 +3,7 @@
   <div class="content">
     <!-- Random image chosen on page load -->
     {{ $images := slice "image01.jpg" "image02.jpg" "image03.jpg" "image04.jpg"
-    "image05.jpg" "image06.jpg" }} {{ $imagePaths := slice }} {{ range $images
+    "image05.jpg" }} {{ $imagePaths := slice }} {{ range $images
     }} {{ $image := resources.Get (printf "profile-images/%s" .) }} {{
     $imagePaths = $imagePaths | append $image }} {{ end }} {{ $shuffled :=
     shuffle $imagePaths }}
@@ -39,7 +39,6 @@
         "{{ (index $shuffled 2).RelPermalink }}",
         "{{ (index $shuffled 3).RelPermalink }}",
         "{{ (index $shuffled 4).RelPermalink }}",
-        "{{ (index $shuffled 5).RelPermalink }}",
       ];
 
       let currentImageIndex = 0;
