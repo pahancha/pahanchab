@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html
+  lang="en-us"
+  dir="ltr"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Sneak Peak to First Class Functions | pahancha</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+
+      <script src="/js/main.js"></script>
+      <script src="/js/theme.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <header><div class="title-theme-toggle">
+  <h1>pahancha</h1>
+  <button id="theme-toggle" aria-label="Toggle Dark Mode">
+    <svg id="light-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+    </svg>
+    <svg id="dark-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" style="display: none;">
+      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+    </svg>
+  </button>
+</div>
+
+
+  <nav>
+    <ul class="navigation-menu">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a aria-current="true" class="ancestor" href="/posts/">Posts</a>
+    </li>
+    <li>
+      <a href="/categories/">Categories</a>
+    </li>
+    <li>
+      <a href="/about">About</a>
+    </li>
+    </ul>
+  </nav>
+
+</header>
+      <main>
+  <h1>Sneak Peak to First Class Functions</h1>
+
+  
+  
+  <time datetime="2022-05-15T00:00:00&#43;05:30">May 15, 2022</time>
+
+  <p>If a programming language treats functions as any other variable, that particular programming language is considered to have first-class functions.</p>
+<p>In a programming language with first-class functions,</p>
+<ul>
+<li>A function can be assigned as a value to a variable.</li>
+<li>A function can be passed as an argument to another function.</li>
+<li>Another function can return a function.</li>
+</ul>
+<h2 id="assign-a-function-to-a-variable">Assign a function to a variable.</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">helloWorld</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#960050;background-color:#1e0010">“</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">worldz</span><span style="color:#f92672">!</span><span style="color:#960050;background-color:#1e0010">”</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">helloWorld</span>();
+</span></span></code></pre></div><h2 id="pass-a-function-as-an-argument-to-another-function">Pass a function as an argument to another function.</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayHello</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Return</span> <span style="color:#960050;background-color:#1e0010">“</span><span style="color:#a6e22e">hello</span><span style="color:#960050;background-color:#1e0010">”</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">greeting</span>(<span style="color:#a6e22e">message</span>, <span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">message</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">name</span> );
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">greeting</span>(<span style="color:#a6e22e">sayHello</span>, <span style="color:#960050;background-color:#1e0010">“</span><span style="color:#a6e22e">world</span><span style="color:#f92672">!</span><span style="color:#960050;background-color:#1e0010">”</span>);
+</span></span></code></pre></div><p>The above sayHello function is passed as an argument to the greeting function. When a function is used as an argument to another function, that function is called a callback function. Therefore sayHello() is a callback function.</p>
+<h2 id="return-a-function-from-another-function">Return a function from another function.</h2>
+<p>In a programming language with first-class functions, functions are treated as a value. So a function can be returned from another function.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayHelloWorld</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#960050;background-color:#1e0010">“</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">world</span><span style="color:#f92672">!</span><span style="color:#960050;background-color:#1e0010">”</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>If a function returns another function, that function is called a Higher-Order function.</p>
+<p>To invoke a Higher-Order function, there are two ways.</p>
+<ol>
+<li>Using Variables.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sayHelloWorld</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">retun</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#960050;background-color:#1e0010">“</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">World</span><span style="color:#f92672">!</span><span style="color:#960050;background-color:#1e0010">”</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">func</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sayHello</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">func</span>();
+</span></span></code></pre></div><ol start="2">
+<li>Using double parentheses.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayHelloWorld</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#960050;background-color:#1e0010">“</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">world</span><span style="color:#f92672">!</span><span style="color:#960050;background-color:#1e0010">”</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sayHelloWorld</span>()();
+</span></span></code></pre></div><p>For the above examples, I have Used JavaScript. JavaScript is not the only language with first-class functions.</p>
+<p>Most functional programming languages (Haskell, Scala, Julia …)  and scripting languages (JavaScript, Python, Perl, PHP … ) are considered to have first-class functions.</p>
+  
+  <div>
+    <div>Tags:</div>
+    <ul>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/javascript/">JavaScript</a></li>
+        <li><a href="/tags/under-the-hood/">Under the Hood</a></li>
+    </ul>
+  </div>
+
+</main>
+      <footer><p>pahancha 2024. this blog and the theme are opensource! &lt;3 </p>
+</footer>
+    </div>
+  </body>
+</html>

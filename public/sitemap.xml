@@ -2,31 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/coding/</loc>
-    <lastmod>2024-09-16T10:39:04+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/green/</loc>
-    <lastmod>2024-09-16T10:39:04+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/red/</loc>
-    <lastmod>2024-09-16T10:39:04+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-09-16T10:39:04+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/test-post/</loc>
-    <lastmod>2024-09-16T10:39:04+05:30</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2024-09-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
     <lastmod>2024-09-16T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/2024-01-02-programming-paradigms/</loc>
+    <lastmod>2024-01-02T00:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/computer-science-concepts/</loc>
+    <lastmod>2024-01-02T00:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/paradigms/</loc>
+    <lastmod>2024-01-02T00:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/programming/</loc>
+    <lastmod>2024-01-02T00:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-01-02T00:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/computer-memory/</loc>
+    <lastmod>2023-06-14T00:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/data-structures/</loc>
+    <lastmod>2023-06-14T00:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2023-06-14-data-structures-c/</loc>
+    <lastmod>2023-06-14T00:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2023-03-07-memory-management-101/</loc>
+    <lastmod>2023-03-07T00:00:00+05:30</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2023-01-01T08:30:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2023-01-01T08:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/javascript/</loc>
+    <lastmod>2022-05-15T00:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2022-05-15-first-class-function-sneak-peak/</loc>
+    <lastmod>2022-05-15T00:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/under-the-hood/</loc>
+    <lastmod>2022-05-15T00:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2022-01-15-how-does-javascript-work/</loc>
+    <lastmod>2022-01-15T00:00:00+05:30</lastmod>
   </url>
 </urlset>

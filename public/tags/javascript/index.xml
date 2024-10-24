@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JavaScript on pahancha</title>
+    <link>http://localhost:1313/tags/javascript/</link>
+    <description>Recent content in JavaScript on pahancha</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 May 2022 00:00:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sneak Peak to First Class Functions</title>
+      <link>http://localhost:1313/posts/2022-05-15-first-class-function-sneak-peak/</link>
+      <pubDate>Sun, 15 May 2022 00:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/2022-05-15-first-class-function-sneak-peak/</guid>
+      <description>&lt;p&gt;If a programming language treats functions as any other variable, that particular programming language is considered to have first-class functions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How does JavaScript Work?</title>
+      <link>http://localhost:1313/posts/2022-01-15-how-does-javascript-work/</link>
+      <pubDate>Sat, 15 Jan 2022 00:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/2022-01-15-how-does-javascript-work/</guid>
+      <description>&lt;p&gt;JavaScript has become the leading language of the web due to the rapid development of the JavaScript based Libraries and Frameworks during the last decade. Hundreds of libraries and frameworks, for both front end and back end. As I know there are plenty of people in my circle who work with these frameworks and libraries on a daily basis but have no idea about what’s going on under the hood.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
