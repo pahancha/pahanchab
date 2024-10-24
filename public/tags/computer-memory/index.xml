@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computer Memory on pahancha</title>
+    <link>http://localhost:1313/tags/computer-memory/</link>
+    <description>Recent content in Computer Memory on pahancha</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/computer-memory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unlocking the power of Data Structures in C</title>
+      <link>http://localhost:1313/posts/2023-06-14-data-structures-c/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/2023-06-14-data-structures-c/</guid>
+      <description>&lt;p&gt;Arrays, Structures Unions, Enums, Pointers and Bit Fields in C language.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stack and Heap :- Computer Memory 101</title>
+      <link>http://localhost:1313/posts/2023-03-07-memory-management-101/</link>
+      <pubDate>Tue, 07 Mar 2023 00:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/2023-03-07-memory-management-101/</guid>
+      <description>&lt;p&gt;When giving instructions to computers(programming, not giving commands in natural language), computer memory is the space where the instructions (computer program) and data are stored during runtime.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -6,14 +6,42 @@
     <description>Recent content in Pahan on pahancha</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Sep 2024 10:39:04 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test Post</title>
-      <link>http://localhost:1313/posts/test-post/</link>
-      <pubDate>Mon, 16 Sep 2024 10:39:04 +0530</pubDate>
-      <guid>http://localhost:1313/posts/test-post/</guid>
-      <description>This is the first post of mine in my hugo personal blog and website.</description>
+      <title>A sneak peak to programming paradigms : a quick discussion</title>
+      <link>http://localhost:1313/posts/2024-01-02-programming-paradigms/</link>
+      <pubDate>Tue, 02 Jan 2024 00:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/2024-01-02-programming-paradigms/</guid>
+      <description>&lt;p&gt;Programming has different ways of solving problems, kind of like different styles of storytelling. There are two main groups: Imperative and Declarative.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Unlocking the power of Data Structures in C</title>
+      <link>http://localhost:1313/posts/2023-06-14-data-structures-c/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/2023-06-14-data-structures-c/</guid>
+      <description>&lt;p&gt;Arrays, Structures Unions, Enums, Pointers and Bit Fields in C language.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stack and Heap :- Computer Memory 101</title>
+      <link>http://localhost:1313/posts/2023-03-07-memory-management-101/</link>
+      <pubDate>Tue, 07 Mar 2023 00:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/2023-03-07-memory-management-101/</guid>
+      <description>&lt;p&gt;When giving instructions to computers(programming, not giving commands in natural language), computer memory is the space where the instructions (computer program) and data are stored during runtime.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sneak Peak to First Class Functions</title>
+      <link>http://localhost:1313/posts/2022-05-15-first-class-function-sneak-peak/</link>
+      <pubDate>Sun, 15 May 2022 00:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/2022-05-15-first-class-function-sneak-peak/</guid>
+      <description>&lt;p&gt;If a programming language treats functions as any other variable, that particular programming language is considered to have first-class functions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How does JavaScript Work?</title>
+      <link>http://localhost:1313/posts/2022-01-15-how-does-javascript-work/</link>
+      <pubDate>Sat, 15 Jan 2022 00:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/2022-01-15-how-does-javascript-work/</guid>
+      <description>&lt;p&gt;JavaScript has become the leading language of the web due to the rapid development of the JavaScript based Libraries and Frameworks during the last decade. Hundreds of libraries and frameworks, for both front end and back end. As I know there are plenty of people in my circle who work with these frameworks and libraries on a daily basis but have no idea about what’s going on under the hood.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

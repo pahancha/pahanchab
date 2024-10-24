@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html
+  lang="en-us"
+  dir="ltr"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Stack and Heap :- Computer Memory 101 | pahancha</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+
+      <script src="/js/main.js"></script>
+      <script src="/js/theme.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <header><div class="title-theme-toggle">
+  <h1>pahancha</h1>
+  <button id="theme-toggle" aria-label="Toggle Dark Mode">
+    <svg id="light-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+    </svg>
+    <svg id="dark-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" style="display: none;">
+      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+    </svg>
+  </button>
+</div>
+
+
+  <nav>
+    <ul class="navigation-menu">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a aria-current="true" class="ancestor" href="/posts/">Posts</a>
+    </li>
+    <li>
+      <a href="/categories/">Categories</a>
+    </li>
+    <li>
+      <a href="/about">About</a>
+    </li>
+    </ul>
+  </nav>
+
+</header>
+      <main>
+  <h1>Stack and Heap :- Computer Memory 101</h1>
+
+  
+  
+  <time datetime="2023-03-07T00:00:00&#43;05:30">March 7, 2023</time>
+
+  <p>When giving instructions to computers(programming, not giving commands in natural language), computer memory is the space where the instructions (computer program) and data are stored during runtime.</p>
+<p>Computer memory can be divided into two primary types.</p>
+<ul>
+<li>Stack Memory</li>
+<li>Heap Memory</li>
+</ul>
+<h2 id="stack-memory">Stack Memory</h2>
+<p>Stack memory is the area of memory that is allocated to the program automatically by the compiler. The stack memory is used to store data and metadata related to the execution of a program which are listed below.</p>
+<ul>
+<li>
+<p><strong>Function parameters.</strong> - When a function is called, its parameters are typically passed on to the stack memory. For example, let&rsquo;s assume that a function has parameters x and y. When the function is called, the values of x and y are pushed to the stack. Then the function accesses them from the stack memory.</p>
+</li>
+<li>
+<p><strong>Local variables.</strong> - The variables that are declared inside a function are defined as local variables. And the local variables are only accessible within the function scope. Let’s assume that variable x has been assigned the value of 12. The value of x would be stored in the stack until that particular function returns. </p>
+</li>
+<li>
+<p><strong>Function return addresses.</strong> - When a function is called, the address of the next intended instruction to execute can be called the function return address. The function return address is pushed into the stack memory and this allows the program to return to the correct location after the execution of the function has been completed.</p>
+</li>
+</ul>
+<p>The stack memory is managed by the CPU. Mainly pushing and popping data from the stack memory as required by the particular program.</p>
+<h2 id="heap-memory">Heap Memory</h2>
+<p>Heap memory is used to store dynamically allocated data such as arrays and objects. In many programming languages such as Java and python, the heap memory is managed automatically by a process known as garbage collection.
+But when it comes to a low level programming language like C, it does not have built-in garbage collection. It&rsquo;s the programmer’s duty to manage memory allocation and deallocation using <code>malloc()</code> and <code>free()</code> functions. If the programmer fails to deallocate heap memory, it can lead to memory leaks.</p>
+  
+  <div>
+    <div>Tags:</div>
+    <ul>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/computer-memory/">Computer Memory</a></li>
+        <li><a href="/tags/data-structures/">Data Structures</a></li>
+    </ul>
+  </div>
+
+</main>
+      <footer><p>pahancha 2024. this blog and the theme are opensource! &lt;3 </p>
+</footer>
+    </div>
+  </body>
+</html>

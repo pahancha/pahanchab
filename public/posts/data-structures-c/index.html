@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html
+  lang="en-us"
+  dir="ltr"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Unlocking the power of Data Structures in C | pahancha</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+
+      <script src="/js/main.js"></script>
+      <script src="/js/theme.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <header><div class="title-theme-toggle">
+  <h1>pahancha</h1>
+  <button id="theme-toggle" aria-label="Toggle Dark Mode">
+    <svg id="light-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+    </svg>
+    <svg id="dark-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" style="display: none;">
+      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+    </svg>
+  </button>
+</div>
+
+
+  <nav>
+    <ul class="navigation-menu">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a aria-current="true" class="ancestor" href="/posts/">Posts</a>
+    </li>
+    <li>
+      <a href="/categories/">Categories</a>
+    </li>
+    <li>
+      <a href="/about">About</a>
+    </li>
+    </ul>
+  </nav>
+
+</header>
+      <main>
+  <h1>Unlocking the power of Data Structures in C</h1>
+
+  
+  
+  <time datetime="2023-06-14T00:00:00&#43;05:30">June 14, 2023</time>
+
+  <p>Arrays, Structures Unions, Enums, Pointers and Bit Fields in C language.</p>
+<p>As I began revising data structures, my curiosity led me toward the C language and its inherent data types and structures. Unlike high-level programming languages, C doesn&rsquo;t offer built-in data structures such as dynamic arrays, linked lists, hash tables/maps, stacks, or queues. Instead, it provides some basic yet powerful low-level data structures. The purpose of this post is to discuss these data structures in a brief yet informative manner.</p>
+<h3 id="arrays">Arrays</h3>
+<p>Imagine that you need to store multiple values of the same type. Replacing dozens of variables, arrays come into play!
+An array is like a container, holding elements of a single type. Arrays in the C language are a fixed-size, sequential collection of elements of the same type. For example, we can declare an array of 5 integers as &lsquo;int array[5]&rsquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> array[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>}
+</span></span></code></pre></div><p>As usually accessing those elements is possible via element&rsquo;s index.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d&#34;</span>, array[<span style="color:#ae81ff">2</span>])
+</span></span></code></pre></div><p>In C, there is no built-in way to remove an element from an array. Arrays in C are static meaning that the size is fixed at the time of declaring the array.</p>
+<h3 id="structures">Structures</h3>
+<p>Structures in C, is a user defined data type that allows related data elements to be grouped together. This is useful when we want to store related data that are of different types (int, char, float, double). For example, we can store information about a book such as title, author, price in a single structure.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> Book {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> title[<span style="color:#ae81ff">50</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> author[<span style="color:#ae81ff">50</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">float</span> price;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>After defining the stucture type, we can create structure variables.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> Book book1, book2;
+</span></span></code></pre></div><p>Above, book1 and book2 are variables of the &lsquo;Book&rsquo; structure type.</p>
+<p>We can access the fields of a structure using the dot operator.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">strcpy</span>(book1.title, <span style="color:#e6db74">&#34;The C Programming Language&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">strcpy</span>(book1.author, <span style="color:#e6db74">&#34;Dennis Ritchie&#34;</span>);
+</span></span><span style="display:flex;"><span>book1.price <span style="color:#f92672">=</span> <span style="color:#ae81ff">19.99</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">printf</span>(book1.author)
+</span></span></code></pre></div><h3 id="unions">Unions</h3>
+<p>Union is a special data type that allows different types of variables to share the same memory location. You can define a union with many members, but only one member can contain a value at any given time.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">union</span> my_union {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> my_int;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">double</span> my_double;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">union</span> my_union u;
+</span></span><span style="display:flex;"><span>u.my_int <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#75715e">// The union now contains an int. Any previous value (int or double) is overwritten.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>u.my_double <span style="color:#f92672">=</span> <span style="color:#ae81ff">4.5</span> <span style="color:#75715e">// The union now contains a double value. The previous int value is now overwritten.
+</span></span></span></code></pre></div><h3 id="enums">Enums</h3>
+<p>Enumerations are a data type that consists of inegral contrants. By default, the first enumerator has the value 0, and the value of each successive enumerator is increased by 1.</p>
+<p>For example we can have a &lsquo;week&rsquo; enum like below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">enum</span> week {
+</span></span><span style="display:flex;"><span>    Sun,
+</span></span><span style="display:flex;"><span>    Mon, 
+</span></span><span style="display:flex;"><span>    Tue,
+</span></span><span style="display:flex;"><span>    Wed,
+</span></span><span style="display:flex;"><span>    Thu,
+</span></span><span style="display:flex;"><span>    Fri,
+</span></span><span style="display:flex;"><span>    Sat
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>By default, the days will be assigned values from 0 to 6.</p>
+<h3 id="pointers">Pointers</h3>
+<p>A pointer is a aribale that stores the address of another variable. Pointers provide the basis for dunamic data structures such as linked lists, trees and graphs. To declare a pointer, we have to use &lsquo;*&rsquo; operator in &ldquo;int *ptr&rdquo; way. Here, ptr is a pointer to an integer.</p>
+<p>Pointers deal with memory addresses directly and can be tricky to understand at the first place. I am hoping to write about pointers in a dedicated post.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> var <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>ptr;
+</span></span><span style="display:flex;"><span>ptr <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>var;
+</span></span></code></pre></div><h3 id="bit-fields">Bit Fields</h3>
+<p>Bit fileds allow the packing of data in a structure. This is especially useful when memory is limited. As mentioned earlier, bit field is declared as a structure, where the number of bits used for each element is specified.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> BitField {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> is_true:<span style="color:#ae81ff">1</span>;   <span style="color:#75715e">// Uses only 1 bit
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> value:<span style="color:#ae81ff">4</span>;     <span style="color:#75715e">// Uses 4 bits
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>;           <span style="color:#75715e">// Forces alignment to next boundary.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> other_value:<span style="color:#ae81ff">6</span>;  <span style="color:#75715e">// Uses 6 bits
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>};
+</span></span></code></pre></div><p>As we can see, the basic low level data structures in c, involves memory not like other high-level programming languages. Even though there is a learning curve, learning data structures in C, allows to explore the inner behaviour of data structures and helps to understand them in a better and clearer way.</p>
+  
+  <div>
+    <div>Tags:</div>
+    <ul>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/computer-memory/">Computer Memory</a></li>
+        <li><a href="/tags/data-structures/">Data Structures</a></li>
+    </ul>
+  </div>
+
+</main>
+      <footer><p>pahancha 2024. this blog and the theme are opensource! &lt;3 </p>
+</footer>
+    </div>
+  </body>
+</html>

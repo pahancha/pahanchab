@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html
+  lang="en-us"
+  dir="ltr"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>How does JavaScript Work? | pahancha</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+
+      <script src="/js/main.js"></script>
+      <script src="/js/theme.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <header><div class="title-theme-toggle">
+  <h1>pahancha</h1>
+  <button id="theme-toggle" aria-label="Toggle Dark Mode">
+    <svg id="light-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+    </svg>
+    <svg id="dark-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" style="display: none;">
+      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+    </svg>
+  </button>
+</div>
+
+
+  <nav>
+    <ul class="navigation-menu">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a aria-current="true" class="ancestor" href="/posts/">Posts</a>
+    </li>
+    <li>
+      <a href="/categories/">Categories</a>
+    </li>
+    <li>
+      <a href="/about">About</a>
+    </li>
+    </ul>
+  </nav>
+
+</header>
+      <main>
+  <h1>How does JavaScript Work?</h1>
+
+  
+  
+  <time datetime="2022-01-15T00:00:00&#43;05:30">January 15, 2022</time>
+
+  <p>JavaScript has become the leading language of the web due to the rapid development of the JavaScript based Libraries and Frameworks during the last decade. Hundreds of libraries and frameworks, for both front end and back end. As I know there are plenty of people in my circle who work with these frameworks and libraries on a daily basis but have no idea about what’s going on under the hood.</p>
+<p>Frankly, I too belonged to the same group until I wanted to know what this all about. How did JavaScript become so popular? And moreover, how does JavaScript work?</p>
+<p>To talk about JavaScript, first, we have to turn towards our web browser. Mainly web browsers consist of two main programs. These are the main programs that play a huge role when it comes to displaying web pages on our mobile or computer.</p>
+<h3 id="rendering-engine">Rendering Engine</h3>
+<p>Rendering engine consists of the HTML Parser and the CSS Parser. And this bears the responsibility to convert the HTML code and the CSS code into structured web pages that we visually see in the web browser.</p>
+<h3 id="javascript-engine">JavaScript Engine</h3>
+<p>And the JavaScript Engine, javascript engine is the heart of functioning js code. This holds the responsibility of converting the js syntax into machine code.</p>
+<p>JavaScript is laid out according to ecma-262 standard. Therefore JavaScript is a High-level, multi-paradigm, dynamic programming language and those definitions are directly related with ecma-262 standards. However ecma-262 does not specify how the javascript interpreter should be implemented.
+JavaScript is an interpreted programming language. Hence an interpreter is needed to convert the javascript syntax into machine code.</p>
+<p>Since the ecma-262 standard does not carry information about the javascript interpreter, those implementations are done by browser developers.</p>
+<p>The way different JavaScript engines work is slightly different but most of them do a thing called JIT (Just In - Time) compilation. Here, Converting the JavaScript code into machine code gets the features of a compiler.</p>
+<h4 id="there-are-a-number-of-javascript-engines-developed-by-different-organizations-and-communities">There are a number of javascript engines developed by different organizations and communities.</h4>
+<ul>
+<li>Google - V8</li>
+<li>FIrefox - spider monkey</li>
+<li>Safari - Nitro</li>
+<li>Internet Explorer / Edge - Chakra</li>
+</ul>
+<p>{% include aligner.html images=&ldquo;posts/spider-monkey.jpg&rdquo; %}</p>
+<p><em>In case you wonder, Here is a spider monkey.</em></p>
+<p>In this scenario, let’s take a look at the <!-- raw HTML omitted -->V8 engine<!-- raw HTML omitted -->,the JavaScript engine which is used inside Google Chrome and Node.js. V8 was originally designed and developed by the big brains at Google, the people who know what they do. V8 is open source and written in C++.</p>
+<p>As I mentioned above, most of the js engines do “JIT Compilation”. V8 does it too. So what is this JIT? JavaScript is a very fast language even though it is a dynamically typed language(We will discuss this later.). JIT compilation is the reason for that. During the Just In Time Compilation, the machine code is being generated during the runtime. Compilation and the execution goes at the sametime. Remember in JIT compilation it’s <!-- raw HTML omitted -->not<!-- raw HTML omitted --> first compiling ahead of time, finishing the compilation and then executing. It’s a mix of both of the processes.</p>
+<p>In modern JavaScript engines, there are at least two compilers. One of the two is an optimizing compiler and the other being the baseline compiler. The optimizing compiler re-complies the “hot functions” in the JS code. A function which is being used a lot and worth speeding up the process is identified as a hot function. So compile, run a few times, optimize, assuming certain conditions, run the optimized code, if the conditions fail, go back to the basic code.</p>
+<p>{% include aligner.html images=&ldquo;posts/JavaScriptCode.jpg&rdquo; column=1 %}</p>
+<p>If we come to the V8 engine again, The baseline compiler in the V8 engine is called the “Ignition”. The Optimizing Compiler is called “TurboFan”.</p>
+<p>Different JavaScript engines have different optimizers and baseline compilers. Some may have not only one but several numbers of optimizing compilers. For example, safari has two of them.</p>
+<p>How JavaScript works is actually a quite complex topic. We have to talk about topics like ‘why javascript is a dynamically typed language?’, ‘What is the JavaScript Parser?’ etc. Hope to learn more and share more about ‘JavaScript under the hood’ in this blog in the future.</p>
+  
+  <div>
+    <div>Tags:</div>
+    <ul>
+        <li><a href="/tags/programming/">Programming</a></li>
+        <li><a href="/tags/javascript/">JavaScript</a></li>
+        <li><a href="/tags/under-the-hood/">Under the Hood</a></li>
+    </ul>
+  </div>
+
+</main>
+      <footer><p>pahancha 2024. this blog and the theme are opensource! &lt;3 </p>
+</footer>
+    </div>
+  </body>
+</html>
