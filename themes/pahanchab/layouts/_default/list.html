@@ -1,8 +1,16 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  <h1 class="blog-title">{{ .Title }}</h1>
   {{ .Content }}
-  {{ range .Pages }}
-    <h4><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h4>
-    {{ .Summary }}
+  {{ range $index, $element := .Pages }}
+    {{ if ne $index 0 }}
+      <hr class="post-divider">
+    {{ end }}
+    <a href="{{ .RelPermalink }}" class="post-summary">
+      <div>
+        <span class="post-title">{{ .LinkTitle }}</span>
+        <time datetime="{{ .Date.Format "2006-01-02" }}" class="post-title-date">{{ .Date.Format "January 2, 2006" }}</time>
+        <div class="post-summary-content"> <p> {{ .Summary }} </p></div>
+      </div>
+    </a>
   {{ end }}
 {{ end }}
