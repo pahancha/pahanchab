@@ -27,7 +27,9 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
   margin: 0;
 }
 
@@ -99,13 +101,49 @@ a {
 }
 
 @media (max-width: 768px) {
-    .about-header-frame {
-      flex-direction: column;
-    }
+  .about-header-frame {
+    flex-direction: column;
+  }
 }
 
 .title-theme-toggle {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.post-summary-header {
+  display: flex;
+}
+
+.post-summary-date-separator {
+  padding: 0 5px;
+}
+
+.post-summary {
+  margin-bottom: 1rem;
+}
+
+.post-summary p{
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+.post-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.post-title-date {
+  font-style: italic;
+  color: var(--text);
+}
+
+.post-summary-content p{
+  text-decoration: none;
+  color: var(--text);
+}
+
+.blog-title {
+  margin-bottom: 1rem;
 }

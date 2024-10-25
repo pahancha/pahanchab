@@ -1,7 +1,16 @@
 {{ define "main" }}
   {{ .Content }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
+  <p><a href="/about">About me >></a></p>
+  <h2>Latest Blog Posts</h2>
+  {{ range first 5 site.RegularPages }}
+    <article class="post-summary">
+      <div> 
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+      </div>
+      {{ .Summary }}
+    </article>
+    <hr>
   {{ end }}
+  <p><a href="/posts">See all posts</a></p>
 {{ end }}
