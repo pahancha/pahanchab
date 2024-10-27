@@ -3,6 +3,7 @@
   --text: #222;
   --border: #222;
   --link: #00e;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 [data-theme="dark"] {
@@ -10,6 +11,7 @@
   --text: #ffffff;
   --border: #ffffff;
   --link: #3391ff;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
@@ -54,8 +56,25 @@ a {
 }
 
 .navigation-menu {
+  list-style: none;
+  padding: 0;
   display: flex;
   justify-content: space-between;
+}
+
+.navigation-menu a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.navigation-menu a:hover {
+  color: var(--primary);
+}
+
+.navigation-menu a.active {
+  color: var(--link);
+  font-weight:700;
 }
 
 #theme-toggle {
@@ -146,4 +165,9 @@ a {
 
 .blog-title {
   margin-bottom: 1rem;
+}
+
+/* Add transition to elements that change color */
+body, a, button, .navigation-menu a, .post-title-date, .post-summary-content p {
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
