@@ -54,8 +54,25 @@ a {
 }
 
 .navigation-menu {
+  list-style: none;
+  padding: 0;
   display: flex;
   justify-content: space-between;
+}
+
+.navigation-menu a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.navigation-menu a:hover {
+  color: var(--primary);
+}
+
+.navigation-menu a.active {
+  color: var(--link);
+  font-weight:700;
 }
 
 #theme-toggle {
