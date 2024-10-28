@@ -5,6 +5,12 @@
 >
   <head>
     {{ partial "head.html" . }}
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      })();
+    </script>
   </head>
   <body>
     <div class="container">
