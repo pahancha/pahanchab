@@ -209,7 +209,6 @@ body, a, button, .navigation-menu a, .post-title-date, .post-summary-content p {
 
 /* Style inline code */
 code { 
-  background-color: var(--background);
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   font-family: monospace;
