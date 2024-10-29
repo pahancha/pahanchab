@@ -3,8 +3,6 @@
   --text: #222;
   --border: #222;
   --link: #00e;
-  --code-bg: #f0f0f0;
-  --code-color: #222;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -13,8 +11,6 @@
   --text: #ffffff;
   --border: #ffffff;
   --link: #3391ff;
-  --code-bg: #2d2d2d;
-  --code-color: #ffffff;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
