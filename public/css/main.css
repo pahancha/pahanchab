@@ -3,6 +3,10 @@
   --text: #222;
   --border: #222;
   --link: #00e;
+  --h1-color: #1a1a1a;
+  --h2-color: #1a1a1a;
+  --h3-color: #1a1a1a;
+  --h4-color: #1a1a1a;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -11,6 +15,10 @@
   --text: #ffffff;
   --border: #ffffff;
   --link: #3391ff;
+  --h1-color: #ff6b6b;
+  --h2-color: #4ecdc4;
+  --h3-color: #95e1d3;
+  --h4-color: #a8e6cf;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -33,6 +41,26 @@ h2,
 h3,
 h4 {
   margin: 0;
+}
+
+h1 {
+  color: var(--h1-color);
+  transition: color 0.3s ease;
+}
+
+h2 {
+  color: var(--h2-color);
+  transition: color 0.3s ease;
+}
+
+h3 {
+  color: var(--h3-color);
+  transition: color 0.3s ease;
+}
+
+h4 {
+  color: var(--h4-color);
+  transition: color 0.3s ease;
 }
 
 .container {
