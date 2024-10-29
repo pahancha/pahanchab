@@ -3,6 +3,8 @@
   --text: #222;
   --border: #222;
   --link: #00e;
+  --code-bg: #f0f0f0;
+  --code-color: #222;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -11,6 +13,8 @@
   --text: #ffffff;
   --border: #ffffff;
   --link: #3391ff;
+  --code-bg: #2d2d2d;
+  --code-color: #ffffff;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -170,4 +174,19 @@ a {
 /* Add transition to elements that change color */
 body, a, button, .navigation-menu a, .post-title-date, .post-summary-content p {
   transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Style code blocks */
+.highlight pre {
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin: 1rem 0;
+}
+
+/* Style inline code */
+code { 
+  background-color: var(--background);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
 }
